@@ -1,4 +1,4 @@
-package com.example.kelascsqlite.database;
+package com.example.kelascsqlite;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +15,7 @@ import com.example.kelascsqlite.database.DBController;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.HashMap;
+
 
 public class TemanBaru extends AppCompatActivity {
     private TextInputEditText tNama,tTelpon;

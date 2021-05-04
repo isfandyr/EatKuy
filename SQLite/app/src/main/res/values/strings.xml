@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">KelasCSQLite</string>
+
+
+    <string name="deletedata">Delete Data</string>
+    <string name="editdata">Edit Data</string>
+
+
 </resources>
