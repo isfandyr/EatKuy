@@ -10,23 +10,23 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    //deklarasi variabel dengan jenis data ArrayList
     private ArrayList<String> fotoMakanan = new ArrayList<>();
     private ArrayList<String> namaMakanan = new ArrayList<>();
     private ArrayList<String> infoMakanan = new ArrayList<>();
 
 
+    //deklarasi variabel dari layout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         getDataFromInternet();
 
     }
-
+    
+    //mengatur bagaimana data dan menerima data dalam bentuk apa saja, lalu ditampilkan di RecylerView
     private void prosesRecyclerViewAdapter(){
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(fotoMakanan, namaMakanan, infoMakanan, this);
@@ -35,9 +35,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-
+    //mengambil data dari internet
     private void getDataFromInternet(){
 
+        //deskripsi makanan
         namaMakanan.add("Rendang");
         fotoMakanan.add("https://ds393qgzrxwzn.cloudfront.net/resize/m720x480/cat1/img/images/0/IAPkgtg7dj.jpg");
         infoMakanan.add("Kebanyakan dari kita kalau ke restoran Padang pasti langsung pesan rendang. Tak salah memang karena ini merupakan masakan nusantara yang melegenda. Bahkan makanan ini berada di posisi pertama dalam jajaran 50 makanan dunia terenak versi CNN, lho.\n" +
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 "Jika kuah sudah mengental, kamu bisa mulai menuangi santan kentalnya lalu masak pada atas api kecil.\n" +
                 "Aduk terus sampai matang dan juga berminyak serta mengental.");
 
+        //deskripsi makanan
         namaMakanan.add("Nasi Goreng");
         fotoMakanan.add("https://ds393qgzrxwzn.cloudfront.net/resize/m720x480/cat1/img/images/0/U735FuDQKl.jpg");
         infoMakanan.add("Saat ada sisa nasi, tak jarang kita membuatnya sebagai menu nasi goreng untuk sarapan. Bukan hanya sisa nasi saja, nasi yang baru matang juga enak untuk dimasak sebagai nasi goreng. Masakan ini masuk juga dalam daftar makanan terenak di dunia. Kamu bisa lihat resep berikut untuk membuat nasi goreng yang enak.\n" +
@@ -106,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 "Kamu juga perlu menuangi saus tiram lalu menaburkan garam, merica dan kaldu bubuk.\n" +
                 "Aduk sampai nasi berubah dan merata lalu siap disajikan.");
 
+        //deskripsi makanan
         namaMakanan.add("Nasi Uduk");
         fotoMakanan.add("https://ds393qgzrxwzn.cloudfront.net/resize/m720x480/cat1/img/images/0/MWm0lAiOEM.jpg");
         infoMakanan.add("Nasi uduk dibuat dengan cara mengolah beras putih, namun diaron dan dikukus memakai santan. Dibumbui sehingga rasa nasinya begitu khas dan nikmat. Disajkan dengan aneka ikan, masakan ini sering dijual di pinggir jalan sebagai menu sarapan.\n" +
@@ -129,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
                 "Aduk sampai mendidih lalu masukkan santan dan beras.\n" +
                 "Kukuslah sampai beras matang hingga menjadi nasi dan siap disajikan.");
 
+        //deskripsi makanan
         namaMakanan.add("Soto");
         fotoMakanan.add("https://ds393qgzrxwzn.cloudfront.net/resize/m720x480/cat1/img/images/0/HAreePpDt1.jpg");
         infoMakanan.add("Varian soto di Indonesia sangatlah banyak. Masakan berkuah kuning ini di tiap daerah memiliki ciri khasnya sendiri. Cita rasa soto begitu khas dan banyak disukai wisatawan dari berbagai negara. Kamu bisa membuat soto ayam lezat dengan resep persembahan kami.\n" +
@@ -177,6 +181,8 @@ public class MainActivity extends AppCompatActivity {
                 "Paling atas kamu bisa letakkan suwiran daging ayam lalu tuangi dengan kuah soto.\n" +
                 "Jangan lupa taburi bawang goreng dan taruh irisan jeruk nipis di atasnya.");
 
+
+        //deskripsi makanan
         namaMakanan.add("Sate");
         fotoMakanan.add("https://ds393qgzrxwzn.cloudfront.net/resize/m720x480/cat1/img/images/0/SRmxuu31nt.jpg");
         infoMakanan.add("Sate jadi makanan favorit banyak orang nih. Bukan hanya menu favorit di Indonesia, namun sate juga menjadi menu sejumlah restoran internasional. Yuk segera buat menu mudah ini. Untuk sate ayam bumbu kecap bisa intip resep berikut ini.\n" +
@@ -223,6 +229,7 @@ public class MainActivity extends AppCompatActivity {
                 "Irisi cabai dan tomat lalu campur dengan kecap kental manis.\n" +
                 "Aduk semua bahan merata lalu tuang pada sate yang sudah dibakar.");
 
+        //deskripsi makanan
         namaMakanan.add("Gado-Gado");
         fotoMakanan.add("https://ds393qgzrxwzn.cloudfront.net/resize/m720x480/cat1/img/images/0/3hK8KLFy3G.jpg");
         infoMakanan.add("Gado-gado rupanya begitu populer di luar negeri. Di Italia misalnya, lantaran makanan ini pernah diikutsertakan dalam kompetisi dan jadi juara pertama, maka makanan ini pun langsung banyak diminati. Yuk, segera buat dengan resep persembahan kami!\n" +
@@ -265,6 +272,7 @@ public class MainActivity extends AppCompatActivity {
                 "Lalu masukkan juga tahu dan telur.\n" +
                 "Tuangi saus kacang lalu taburi bawang goreng dan emping goreng.");
 
+        //deskripsi makanan
         namaMakanan.add("Gudeg");
         fotoMakanan.add("https://ds393qgzrxwzn.cloudfront.net/resize/m720x480/cat1/img/images/0/M6TBG2qw2p.jpg");
         infoMakanan.add("Khas dari Jogja dan berhasil go international, itulah Gudeg. Makanan ini bahkan diminati untuk diimpor dalam bentuk kalengan. Bahkan di Clayton Road Australia, menu ini terdapat pada salah satu restoran di sana lho. Kalau mau bikin gudeg, kamu bisa lihat resep dari kami, selain itu jika ingin melihat tutorial dan resep alternatifnya.\n" +
@@ -298,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
                 "Kamu bisa memasaknya lagi 4 jam dengan api kecil sambil diaduk perlahan.\n" +
                 "Kalau santan sudah habis dan kuah sudah coklat kemerahan, berarti sudah jadi.");
 
-
+        //deskripsi makanan
         namaMakanan.add("Mi Rebus");
         fotoMakanan.add("https://ds393qgzrxwzn.cloudfront.net/resize/m720x480/cat1/img/images/0/5g5kZz4fGJ.jpg");
         infoMakanan.add("Kala hujan turun, enaknya memang makan yang hangat. Tak ada yang bisa menolah lezatnya mi rebus khas Indonesia nih. Kamu pastinya juga suka banget kan makan mi rebus kala hujan turun. Segera buat yuk, mi rebus yang lezat dengan resep di bawah ini.\n" +
@@ -329,6 +337,7 @@ public class MainActivity extends AppCompatActivity {
                 "Tambahkan kecap, merica, garam dan ayam suwir.\n" +
                 "Aduk rata dan biarkan kuah mendidih baru sajikan.");
 
+        //deskripsi makanan
         namaMakanan.add("Sop Buntut");
         fotoMakanan.add("https://ds393qgzrxwzn.cloudfront.net/resize/m720x480/cat1/img/images/0/bUHygzd1h8.jpg");
         infoMakanan.add("Sop buntut selain populer di Indonesia juga populer di Spanyol. Makanan ini kaya akan rempah sehingga rasanya begitu nikmat. Aromanya wangi dan cocok dimakan bersama nasi hangat, pastinya tak tertahankan lezatnya. Segera buat dengan resep kami berikut ini!\n" +
@@ -370,6 +379,7 @@ public class MainActivity extends AppCompatActivity {
                 "Masukkan seledri lalu masak sampai buntut empuk dan bumbunya meresap.\n" +
                 "Masukkan daun bawang dan irisan tomat lalu angkat dan sajikan.");
 
+        //deskripsi makanan
         namaMakanan.add("Bakso");
         fotoMakanan.add("https://ds393qgzrxwzn.cloudfront.net/resize/m720x480/cat1/img/images/0/nOACuiMp4x.jpg");
         infoMakanan.add("Bakso adalah makanan yang bisa ditemukan dengan mudah di Indonesia. Makanan ini juga menjadi makanan favorit warga Tiongkok. Dibuat dari daging sapi, aromanya menggoda dan rasanya nikmat. Kamu bisa buat bakso dengan resep dari kami berikut ini.\n" +

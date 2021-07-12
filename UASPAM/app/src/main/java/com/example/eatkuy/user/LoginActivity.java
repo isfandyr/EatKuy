@@ -20,11 +20,15 @@ import com.example.eatkuy.database.DBHelper;
 
 import static android.text.Html.fromHtml;
 
+
+//mendeklarasikan variable EditText, Button, DBHelper
 public class LoginActivity extends AppCompatActivity {
     EditText edtEmail, edtPassword;
     Button lgnBtn;
     DBHelper dbHelper;
 
+
+    //mendeklarasikan variable dari layout agar data yang di deklarasikan dapat dimunculkan
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,14 +41,13 @@ public class LoginActivity extends AppCompatActivity {
         dbHelper = new DBHelper(this);
 
 
-
+        //membuat textview Daftar
         TextView daftar = (TextView)findViewById(R.id.edtDaftar);
         daftar.setText(fromHtml("Belum punya akun. " +
                 "</font><font color='#3b5998'>create one</font>"));
 
+        //memanggil class DaftarActivity dengan menekan textview
         daftar.setOnClickListener(new View.OnClickListener() {
-
-
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(LoginActivity.this, DaftarActivity.class);
@@ -52,12 +55,17 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //membuat fungsi onclick pada button lgnBtn
         lgnBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //menyimpan input user di edittext email kedalam variabel email
                 String email = edtEmail.getText().toString().trim();
+
+                //menyimpan input user di edittext password kedalam variabel password
                 String password = edtPassword.getText().toString().trim();
 
+                //mengecek apakah isi dari email dan password sudah benar
                 Boolean res = dbHelper.checkUser(email, password);
                 if (res == true){
                     Toast.makeText(LoginActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
